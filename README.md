@@ -10,30 +10,55 @@ UAS: 35%
 Flowchart Program
 mermaidflowchart TD
     A([START]) --> B[Inisialisasi list data_mahasiswa]
+    
     B --> C[Tampilkan header program]
+    
     C --> D[Input Nama Mahasiswa]
+    
     D --> E[Input NIM]
+    
     E --> F[Input Nilai Tugas]
+    
     F --> G[Input Nilai UTS]
+    
     G --> H[Input Nilai UAS]
+    
     H --> I{Validasi Input Nilai}
+    
     I -->|Error| J[Tampilkan pesan error]
+    
     J --> F
+    
     I -->|Valid| K[Hitung Nilai Akhir<br/>NA = Tugas*0.3 + UTS*0.35 + UAS*0.35]
+    
     K --> L[Simpan data ke list]
+    
     L --> M[Tampilkan konfirmasi]
+    
     M --> N{Tambah data lagi?<br/>y/t?}
+    
     N -->|y - Ya| D
+    
     N -->|t - Tidak| O[Tampilkan header daftar]
+    
     O --> P{Apakah list kosong?}
+    
     P -->|Ya| Q[Tampilkan: Tidak ada data]
+    
     P -->|Tidak| R[Loop untuk setiap mahasiswa]
+    
     R --> S[Tampilkan data mahasiswa]
+    
     S --> T{Masih ada data?}
+    
     T -->|Ya| R
+    
     T -->|Tidak| U[Tampilkan pesan selesai]
+    
     Q --> U
+    
     U --> V([END])
+    
 Penjelasan Program
 1. Struktur Data
 Program menggunakan list sebagai wadah utama untuk menyimpan data mahasiswa. Setiap mahasiswa disimpan dalam bentuk dictionary dengan key:
